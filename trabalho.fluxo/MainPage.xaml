@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="trabalho.fluxo.MainPage">
+
+ <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="O que deseja fazer?"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Padding="10"
+                   BackgroundColor="#DFFFD6"
+                   TextColor="Black" />
+
+            <Button Text="Cadastrar fornecedor"
+                    BackgroundColor="#B8E994"
+                    TextColor="Black"
+                    CornerRadius="10"/>
+                  
+
+            <Button Text="Cadastrar Materia Prima"
+                    BackgroundColor="#B8E994"
+                    TextColor="Black"
+                    CornerRadius="10"/>
+
+            <Button Text="Gerenciar vendas"
+                    BackgroundColor="#B8E994"
+                    TextColor="Black"
+                    CornerRadius="10"
+                    />
+
+            <Button Text="Gerenciar Clientes"
+                    BackgroundColor="#B8E994"
+                    TextColor="Black"
+                    CornerRadius="10"
+                    Clicked="ClientesClicked" />
+
+            <Button Text="Acompanhar vendas"
+                    BackgroundColor="#B8E994"
+                    TextColor="Black"
+                    CornerRadius="10"
+                    />
+
+            <Button Text="Cadastrar costureira"
+                    BackgroundColor="#B8E994"
+                    TextColor="Black"
+                    CornerRadius="10"
+                     />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
