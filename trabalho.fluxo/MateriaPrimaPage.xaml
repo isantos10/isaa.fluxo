@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="trabalho.fluxo.MateriaPrimaPage"
+             BackgroundColor="White">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="CADASTRO MATERIA-PRIMA"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,20"/>
+            
+            <Entry Placeholder="Nome" 
+                   HeightRequest="40"
+                   BackgroundColor="White"
+                   TextColor="Black"/>
+                   
+            <Entry Placeholder="Telefone" 
+                   HeightRequest="40"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                   Keyboard="Telephone"/>
+                   
+            <Entry Placeholder="Quantidade" 
+                   HeightRequest="40"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                   Keyboard="Numeric"/>
+                   
+            <Entry Placeholder="Endereço" 
+                   HeightRequest="40"
+                   BackgroundColor="White"
+                   TextColor="Black"/>
+                   
+            <Button Text="Enviar"
+                    BackgroundColor="#ADD8E6"
+                    TextColor="Black"
+                    CornerRadius="5"
+                    HeightRequest="50"
+                    Clicked="OnEnviarClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+             </ContentPage>

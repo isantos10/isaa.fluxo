@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="trabalho.fluxo.TransportadoraPage">
+
+
+    <StackLayout Padding="20">
+        <Label Text="Cadastro transportadora"
+               FontSize="Large"
+               HorizontalOptions="Center" />
+
+        <Entry Placeholder="Nome" />
+        <Entry Placeholder="Telefone" />
+        <Entry Placeholder="Endereço" />
+        <Entry Placeholder="CNPJ" />
+
+        <Button Text="ENVIAR" 
+                Clicked="SubmitClicked" />
+
+        <StackLayout x:Name="ConfirmationDialog"
+                     IsVisible="False"
+                     BackgroundColor="#f0f0f0"
+                     Padding="10">
+            <Label Text="Tem certeza que deseja enviar?"
+                   HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center">
+                <Button Text="Sim" 
+                        Clicked="YesClicked" />
+
+                <Button Text="Não" 
+                        Clicked="NoClicked" />
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
