@@ -2,7 +2,7 @@ using Modelos;
 
 namespace Controles;
 
-public class ClienteControle : BaseControle
+public class ClienteControle : BaseControles
 {
   
 

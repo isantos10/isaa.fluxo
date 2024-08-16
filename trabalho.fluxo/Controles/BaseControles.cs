@@ -3,7 +3,7 @@ using Modelos;
 
 namespace Controles;
 
-public class BaseControle
+public class BaseControles
 {
   //----------------------------------------------------------------------------
 
@@ -12,9 +12,9 @@ public class BaseControle
 
   //----------------------------------------------------------------------------
 
-  public BaseControle()
+  public BaseControles()
   {
-    var pathToPersonalFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SESI.db");
+    var pathToPersonalFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "LISTA.db");
 
     if (liteDB == null)
       liteDB = new LiteDatabase(@"filename=" + pathToPersonalFolder + "; upgrade=true; Mode=Exclusive");
