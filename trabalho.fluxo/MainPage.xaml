@@ -1,52 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="trabalho.fluxo.MainPage">
+             x:Class="trabalho.fluxo.MainPage"
+             BackgroundColor="#7eabf7"
+             Shell.NavBarIsVisible="False">
 
  <ScrollView>
         <StackLayout Padding="20" Spacing="15">
             <Label Text="O que deseja fazer?"
                    FontSize="24"
-                   HorizontalOptions="Center"
+                   HorizontalOptions="Fill"
                    VerticalOptions="Center"
                    Padding="10"
-                   BackgroundColor="#DFFFD6"
-                   TextColor="Black" />
+                   BackgroundColor="#1e417d"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White" />
 
             <Button Text="Cadastrar fornecedor"
-                    BackgroundColor="#B8E994"
+                    BackgroundColor="White"
                     TextColor="Black"
-                    CornerRadius="10"/>
+                    CornerRadius="10"
+                    Clicked="OnFornecedorClicked"/>
                   
 
             <Button Text="Cadastrar Materia Prima"
-                    BackgroundColor="#B8E994"
+                    BackgroundColor="#d6e5ff"
                     TextColor="Black"
-                    CornerRadius="10"/>
+                    CornerRadius="10"
+                    Clicked="OnCadastrarMateriaPrimaClicked"/>
 
             <Button Text="Gerenciar vendas"
-                    BackgroundColor="#B8E994"
+                    BackgroundColor="#d6e5ff"
                     TextColor="Black"
                     CornerRadius="10"
-                    />
+                    Clicked="OnVendasClicked"/>
 
             <Button Text="Gerenciar Clientes"
-                    BackgroundColor="#B8E994"
+                    BackgroundColor="#d6e5ff"
                     TextColor="Black"
                     CornerRadius="10"
-                    Clicked="ClientesClicked" />
+                    Clicked="ClientesClicked"/>
 
-            <Button Text="Acompanhar vendas"
-                    BackgroundColor="#B8E994"
-                    TextColor="Black"
-                    CornerRadius="10"
-                    />
-
+        
             <Button Text="Cadastrar costureira"
-                    BackgroundColor="#B8E994"
+                    BackgroundColor="#d6e5ff"
                     TextColor="Black"
                     CornerRadius="10"
-                     />
+                    Clicked="OnCostureiraClicked" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

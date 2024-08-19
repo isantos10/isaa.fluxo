@@ -9,9 +9,9 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-        async void OnCadastrarFornecedorClicked(object sender, EventArgs e)
+        async void OnFornecedorClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CadastrarFornecedorPage());
+            await Navigation.PushAsync(new FornecedorPage());
         }
 
         async void OnCadastrarMateriaPrimaClicked(object sender, EventArgs e)
@@ -19,22 +19,18 @@ public partial class MainPage : ContentPage
             await Navigation.PushAsync(new MateriaPrimaPage());
         }
 
-        async void OnGerenciarVendasClicked(object sender, EventArgs e)
+        async void OnVendasClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new GerenciarVendasPage());
-
+            await Navigation.PushAsync(new VendasPage());
+        }
         async void ClientesClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ClientesPage());
         }
-        async void AcomVendasClicked(object sender, EventArgs e)
+
+        async void OnCostureiraClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AcompanharVendasPage());
+            await Navigation.PushAsync(new CostureiraPage());
         }
 
-        async void OnCadastrarCostureiraClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new CadastrarCostureiraPage());
-        }
-}
 }

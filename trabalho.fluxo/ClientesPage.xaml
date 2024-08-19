@@ -8,22 +8,32 @@
             <Label Text="clientes"
                    FontAttributes="Bold"
                    FontSize="Large"
-                   VerticalOptions="Center" />
+                   VerticalOptions="Center" 
+                   HorizontalOptions="FillAndExpand" 
+                   HorizontalTextAlignment="Center"/>
             <Button Text="+"
-                    HorizontalOptions="EndAndExpand"
+                    BackgroundColor="#568aba"
+                    TextColor="Black"
+                    HorizontalOptions="End"
                     Clicked="OnAddClientClicked" />
         </StackLayout>
+           
+        
         <CollectionView x:Name="ClientsCollectionView">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
+
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="FillAndExpand"
                                  Padding="5">
                         <Label Text="{Binding Name}"
                                VerticalOptions="Center" />
                         <Button Text="-"
+                                BackgroundColor="#568aba"
                                 HorizontalOptions="EndAndExpand"
+                                TextColor="Black"
                                 Clicked="OnRemoveClientClicked" />
+
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

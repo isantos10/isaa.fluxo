@@ -5,22 +5,14 @@ namespace trabalho.fluxo
 {
     public partial class ClientesPage : ContentPage
     {
-        public ObservableCollection<Client> Clients { get; set; }
+         Controles.ClienteControle clienteControle = new Controles.ClienteControle();
 
         public ClientesPage()
         {
             InitializeComponent();
 
-            Clients = new ObservableCollection<Client>
-            {
-                new Client { Name = "João" },
-                new Client { Name = "Maria" },
-                new Client { Name = "José" },
-                new Client { Name = "Pedro" },
-                new Client { Name = "Thiago" }
-            };
+            ListaClientes.ItemsSource = clienteControle.LerTodos();
 
-            ClientsCollectionView.ItemsSource = Clients;
         }
 
         private async void OnAddClientClicked(object sender, EventArgs e)
@@ -45,8 +37,5 @@ namespace trabalho.fluxo
         }
     }
 
-    public class Client
-    {
-        public string Name { get; set; }
-    }
+
 }

@@ -1,6 +1,6 @@
 using Microsoft.Maui.Controls;
 
-namespace trabalho.equipe
+namespace trabalho.fluxo
 {
     public partial class TransportadoraPage : ContentPage
     {
@@ -17,7 +17,7 @@ namespace trabalho.equipe
 
         private void YesClicked(object sender, EventArgs e)
         {
-            // Handle confirmation and submission logic here
+           
             ConfirmationDialog.IsVisible = false;
             DisplayAlert("Success", "Form submitted successfully!", "OK");
         }
