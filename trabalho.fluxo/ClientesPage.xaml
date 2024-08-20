@@ -2,40 +2,73 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="trabalho.fluxo.ClientesPage"
-             BackgroundColor="White"
-             Title="Cadastrar Cliente">
-    <VerticalStackLayout>
-        <Button Text="Criar Novo Cliente"
-                BackgroundColor="Orange"
-                FontSize="16"
-                TextColor="Black"
-                Clicked="OnAddClientClicked"/>
+             BackgroundColor="White">
 
-        <ListView x:Name="ListaClientes"
-                  HasUnevenRows="True"
-                  ItemSelected="QuandoSelecionarItemLista"
-                  HorizontalOptions="Fill"
-                  VerticalOptions="Fill">
+    <ScrollView>
+        <Frame CornerRadius="20"
+               Padding="20"
+               Margin="20"
+               BackgroundColor="White">
+            <VerticalStackLayout Spacing="15">
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <VerticalStackLayout Padding="20"
-                                             BackgroundColor="Pink">
-                            <HorizontalStackLayout>
-                                <Label Text="{Binding Nome}"
-                                       FontSize="20"/>
-                                <Label Text="{Binding Sobrenome}"
-                                       FontSize="20"
-                                       Margin="10,0,0,0"/>
-                            </HorizontalStackLayout>
-                            <Label Text="{Binding Telefone}"
-                                   FontSize="20"/>
-                        </VerticalStackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <ImageButton Source="search_icon.png"
+                                 WidthRequest="40"
+                                 HeightRequest="40"/>
+                    <Entry Placeholder="Procurar Cliente"
+                           WidthRequest="250"
+                           HeightRequest="40"
+                           BackgroundColor="White"
+                           TextColor="Black"/>
+                    <ImageButton Source="add_icon.png"
+                                 WidthRequest="40"
+                                 HeightRequest="40"/>
+                    <ImageButton Source="remove_icon.png"
+                                 WidthRequest="40"
+                                 HeightRequest="40"/>
+                </HorizontalStackLayout>
+
+
+                <Button Text="Cadastrar Cliente"
+                        BackgroundColor="#ADD8E6"
+                        TextColor="Black"
+                        CornerRadius="5"
+                        HeightRequest="50"
+                        Clicked="CadastrarClienteClicked"/>
+
+                <Entry x:Name="NomeEntry"
+                       Placeholder="Nome"
+                       HeightRequest="40"
+                       BackgroundColor="White"
+                       TextColor="Black"/>
+
+                <Entry x:Name="EnderecoEntry"
+                       Placeholder="Endereço"
+                       HeightRequest="40"
+                       BackgroundColor="White"
+                       TextColor="Black"/>
+
+                <Entry x:Name="EmailEntry"
+                        Placeholder="Gmail"
+                       HeightRequest="40"
+                       BackgroundColor="White"
+                       TextColor="Black"/>
+
+                <Entry x:Name="CPFEntry"
+                       Placeholder="CPF"
+                       HeightRequest="40"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Keyboard="Numeric"/>
+
+                <Label x:Name="IdLabel"
+                       Text="Lista de Clientes"
+                       FontSize="Medium"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+
+            </VerticalStackLayout>
+        </Frame>
+    </ScrollView>
 </ContentPage>
                      
