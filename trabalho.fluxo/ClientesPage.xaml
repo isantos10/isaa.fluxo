@@ -1,42 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="trabalho.fluxo.ClientesPage">
-    <StackLayout Padding="10">
-        <StackLayout Orientation="Horizontal"
-                     HorizontalOptions="FillAndExpand">
-            <Label Text="clientes"
-                   FontAttributes="Bold"
-                   FontSize="Large"
-                   VerticalOptions="Center" 
-                   HorizontalOptions="FillAndExpand" 
-                   HorizontalTextAlignment="Center"/>
-            <Button Text="+"
-                    BackgroundColor="#568aba"
-                    TextColor="Black"
-                    HorizontalOptions="End"
-                    Clicked="OnAddClientClicked" />
-        </StackLayout>
-           
-        
-        <CollectionView x:Name="ClientsCollectionView">
-            <CollectionView.ItemTemplate>
+             x:Class="trabalho.fluxo.ClientesPage"
+             BackgroundColor="White"
+             Title="Cadastrar Cliente">
+    <VerticalStackLayout>
+        <Button Text="Criar Novo Cliente"
+                BackgroundColor="Orange"
+                FontSize="16"
+                TextColor="Black"
+                Clicked="OnAddClientClicked"/>
+
+        <ListView x:Name="ListaClientes"
+                  HasUnevenRows="True"
+                  ItemSelected="QuandoSelecionarItemLista"
+                  HorizontalOptions="Fill"
+                  VerticalOptions="Fill">
+
+            <ListView.ItemTemplate>
                 <DataTemplate>
-
-                    <StackLayout Orientation="Horizontal"
-                                 HorizontalOptions="FillAndExpand"
-                                 Padding="5">
-                        <Label Text="{Binding Name}"
-                               VerticalOptions="Center" />
-                        <Button Text="-"
-                                BackgroundColor="#568aba"
-                                HorizontalOptions="EndAndExpand"
-                                TextColor="Black"
-                                Clicked="OnRemoveClientClicked" />
-
-                    </StackLayout>
+                    <ViewCell>
+                        <VerticalStackLayout Padding="20"
+                                             BackgroundColor="Pink">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Nome}"
+                                       FontSize="20"/>
+                                <Label Text="{Binding Sobrenome}"
+                                       FontSize="20"
+                                       Margin="10,0,0,0"/>
+                            </HorizontalStackLayout>
+                            <Label Text="{Binding Telefone}"
+                                   FontSize="20"/>
+                        </VerticalStackLayout>
+                    </ViewCell>
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
 </ContentPage>
+                     

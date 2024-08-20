@@ -20,21 +20,27 @@ namespace trabalho.fluxo
             string result = await DisplayPromptAsync("Novo Cliente", "Digite o nome do cliente:");
             if (!string.IsNullOrWhiteSpace(result))
             {
-                Clients.Add(new Client { Name = result });
+               
             }
         }
 
         private async void OnRemoveClientClicked(object sender, EventArgs e)
         {
-            Button button = sender as Button;
-            Client client = button.BindingContext as Client;
-
             bool confirm = await DisplayAlert("Tem certeza que deseja remover?", "", "sim", "não");
             if (confirm)
             {
-                Clients.Remove(client);
+
             }
         }
+         void QuandoSelecionarUmItemNaLista(object sender, SelectedItemChangedEventArgs e)
+  {
+   
+    var page = new CadastroClientePage();
+  
+    page.cliente = e.SelectedItem as Cliente;
+   
+    Application.Current.MainPage = page;
+  }
     }
 
 
