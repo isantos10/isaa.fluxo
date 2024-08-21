@@ -1,5 +1,4 @@
 using LiteDB;
-using Microsoft.Maui.Controls.Compatibility.Platform.UWP;
 
 namespace Modelos;
 public class Pessoa : Registro

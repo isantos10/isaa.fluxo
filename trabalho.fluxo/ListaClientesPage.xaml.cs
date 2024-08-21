@@ -1,3 +1,5 @@
+using Modelos;
+
 namespace trabalho.fluxo
 {
     public partial class ListaClientePage : ContentPage
@@ -8,7 +10,7 @@ namespace trabalho.fluxo
         {
             InitializeComponent();
 
-            
+
 
         }
         protected override void OnAppearing()
@@ -18,14 +20,19 @@ namespace trabalho.fluxo
         }
         void QuandoSelecionarUmItemNaLista(object sender, SelectedItemChangedEventArgs e)
         {
+            var page = new ClientesPage();
 
+            page.cliente = e.SelectedItem as Cliente;
 
-
+            Application.Current.MainPage = page;
         }
+
+
+
         async void OnClientClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ClientesPage());
         }
-        
+
     }
 }
