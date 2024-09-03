@@ -15,7 +15,10 @@
 
         </Grid.RowDefinitions>
 
+        <Label x:Name="IdLabel">
+        </Label>
 
+               
         <Label Text="Cadastro Costureira" 
                FontSize="Title"
                HorizontalTextAlignment="Center" 
@@ -31,11 +34,11 @@
                Grid.Column="1" />
 
 
-        <Label Text="Telefone:" 
+        <Label Text="Email:" 
                Grid.Row="2" />
                
 
-        <Entry x:Name="EntryTelefone" 
+        <Entry x:Name="EntryEmail" 
                Grid.Row="2" 
                Grid.Column="1" />
 
