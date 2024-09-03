@@ -24,23 +24,28 @@ namespace trabalho.fluxo
                 NomeEntry.Text = cliente.Nome;
                 EnderecoEntry.Text = cliente.Endereço;
                 CPFEntry.Text = cliente.CPF;
-              
-              
+
+
             }
         }
-        async void CadastrarClienteClicked(object sender, EventArgs e)
+        private async void CadastrarClienteClicked(object sender, EventArgs e)
         {
-            var cliente = new Modelos.Cliente();
-            cliente.Nome = NomeEntry.Text;
-            cliente.Endereço = EnderecoEntry.Text;
-            cliente.CPF = CPFEntry.Text;
-            cliente.Email = EmailEntry.Text;
 
+            {
+                var cliente = new Cliente();
+                if (!String.IsNullOrEmpty(IdLabel.Text))
+                    cliente.Id = int.Parse(IdLabel.Text);
+                else
+                    cliente.Id = 0;
+                cliente.Nome = NomeEntry.Text;
+                cliente.Endereço = EnderecoEntry.Text;
+                cliente.CPF = CPFEntry.Text;
+                clienteControle.CriarOuAtualizar(cliente);
 
-            clienteControle.CriarOuAtualizar(cliente);
-
-            await DisplayAlert("Sucesso", "Dados salvos com sucesso", "OK");
+                await DisplayAlert("Cadastro", "Cliente cadastrado com sucesso!", "OK");
+            }
         }
+
 
         void VoltarClicked(object sender, EventArgs e)
         {

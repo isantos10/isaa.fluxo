@@ -4,9 +4,9 @@ namespace Controles;
 
 public class ClienteControle : BaseControles
 {
-  
+    public int ClienteId { get; internal set; }
 
-  public ClienteControle() : base()
+    public ClienteControle() : base()
   {
     NomeDaTabela = "Clientes";
   }

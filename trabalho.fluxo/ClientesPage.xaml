@@ -8,12 +8,16 @@
         <Frame CornerRadius="20"
                Padding="20"
                BackgroundColor="White">
+        
             <VerticalStackLayout Spacing="15">
+                
 
                 <HorizontalStackLayout Spacing="10">
                     <ImageButton Source="search_icon.png"
                                  WidthRequest="40"
                                  HeightRequest="40"/>
+    
+                
                <Button Text="voltar"
                     Clicked="VoltarClicked"
                     BackgroundColor="Orange"
@@ -39,12 +43,13 @@
                         CornerRadius="5"
                         HeightRequest="50"
                         Clicked="CadastrarClienteClicked"/>
-
+                 
                 <Button Text="Excluir"
                         TextColor="Red"
                         BackgroundColor="Transparent"
                         Clicked="ApagarClienteClicked"/>
-
+            
+          
                <Entry x:Name="NomeEntry"
                        Placeholder="Nome"
                        HeightRequest="40"
